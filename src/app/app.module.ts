@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TEXTBOXComponent } from './text-box/text-box.component';
 import { LISTBOXComponent } from './listbox/listbox.component';
 import { CHECKBOXComponent } from './checkbox/checkbox.component';
+import { TEXTAREAComponent } from './textarea/textarea.component';
 
 
 @NgModule({
@@ -18,12 +19,14 @@ import { CHECKBOXComponent } from './checkbox/checkbox.component';
     AppComponent,
     TEXTBOXComponent,
     LISTBOXComponent,
-    CHECKBOXComponent
+    CHECKBOXComponent,
+    TEXTAREAComponent
   ],
   entryComponents: [
     TEXTBOXComponent, 
     LISTBOXComponent,
-    CHECKBOXComponent
+    CHECKBOXComponent,
+    TEXTAREAComponent
   ],
   imports: [
     BrowserModule,

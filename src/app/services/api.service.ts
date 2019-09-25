@@ -5,6 +5,7 @@ import { ProcessItem } from '../process-item';
 import { TEXTBOXComponent } from '../text-box/text-box.component';
 import { LISTBOXComponent } from '../listbox/listbox.component';
 import { CHECKBOXComponent } from '../checkbox/checkbox.component';
+import { TEXTAREAComponent } from '../textarea/textarea.component';
 
 @Injectable({
   providedIn: 'root'
@@ -45,6 +46,8 @@ export class ApiService {
       return LISTBOXComponent;
     } else if (item.POS_CONTROL_TYPE == "CHECKBOX"){
       return CHECKBOXComponent;
+    } else if(item.POS_CONTROL_TYPE == "TEXTAREA" || item.POS_CONTROL_TYPE == "SEARCH_TEXTAREA"){
+      return TEXTAREAComponent;
     }
   }
 
