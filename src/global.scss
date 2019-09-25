@@ -35,11 +35,25 @@ ion-label{
     width: 20% !important;
     text-align: left;
 }
+ion-checkbox{
+    margin: .5em 0;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+   
+}
+
+span{
+    padding-left: 2.5em;
+    padding: .7em 1em;
+    z-index: 2;
+    white-space: normal;
+}
 
 .style_border {
     max-width: 100%;
     min-width: 85%;
-    background-color: #f3f6fb;
+    background-color: rgba(202, 228, 238, 0.2);
     border: 1px solid lightgrey;
     font-size: 16px;
     font-weight: normal;

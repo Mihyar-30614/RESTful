@@ -43,7 +43,7 @@ export class ApiService {
       return TEXTBOXComponent;
     } else if (item.POS_CONTROL_TYPE == "LISTBOX") {
       return LISTBOXComponent;
-    } else if (CHECKBOXComponent){
+    } else if (item.POS_CONTROL_TYPE == "CHECKBOX"){
       return CHECKBOXComponent;
     }
   }
