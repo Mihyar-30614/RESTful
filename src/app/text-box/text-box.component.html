@@ -1,6 +1,6 @@
 <ion-row>
   <ion-item>
       <ion-label>{{data.POS_LABEL}}</ion-label>
-      <ion-input type="text" value={{data.POS_DEFAULT_CODE}}  class="style_border" [disabled]="data.POS_CONTROL_DISABLED == '1' ? true : false"></ion-input>
+      <ion-input type="text" [value]=data.POS_DEFAULT_CODE class="style_border" [disabled]="data.POS_CONTROL_DISABLED == '1' ? true : false"></ion-input>
     </ion-item>
 </ion-row>

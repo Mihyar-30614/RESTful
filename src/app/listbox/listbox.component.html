@@ -1,0 +1,8 @@
+<ion-row>
+  <ion-item>
+    <ion-label>{{data.POS_LABEL}}</ion-label>
+      <ion-select multiple="false" class="style_border" [disabled]="data.POS_CONTROL_DISABLED == '1' ? true : false">
+        <ion-select-option *ngFor="let option of data.RESULT" [value]="option.CODE">{{option.DESC}}</ion-select-option>
+      </ion-select>
+  </ion-item>
+</ion-row>

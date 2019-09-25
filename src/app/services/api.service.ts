@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ProcessItem } from '../process-item';
-import { TextBoxComponent } from '../text-box/text-box.component';
+import { TEXTBOXComponent } from '../text-box/text-box.component';
+import { LISTBOXComponent } from '../listbox/listbox.component';
+import { CHECKBOXComponent } from '../checkbox/checkbox.component';
 
 @Injectable({
   providedIn: 'root'
@@ -38,7 +40,11 @@ export class ApiService {
 
   resolveComponentType (item) {
     if (item.POS_CONTROL_TYPE == "TEXTBOX"){
-      return TextBoxComponent;
+      return TEXTBOXComponent;
+    } else if (item.POS_CONTROL_TYPE == "LISTBOX") {
+      return LISTBOXComponent;
+    } else if (CHECKBOXComponent){
+      return CHECKBOXComponent;
     }
   }
 

@@ -8,15 +8,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { TextBoxComponent } from './text-box/text-box.component';
+import { TEXTBOXComponent } from './text-box/text-box.component';
+import { LISTBOXComponent } from './listbox/listbox.component';
+import { CHECKBOXComponent } from './checkbox/checkbox.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextBoxComponent
+    TEXTBOXComponent,
+    LISTBOXComponent,
+    CHECKBOXComponent
   ],
   entryComponents: [
-    TextBoxComponent
+    TEXTBOXComponent, 
+    LISTBOXComponent,
+    CHECKBOXComponent
   ],
   imports: [
     BrowserModule,

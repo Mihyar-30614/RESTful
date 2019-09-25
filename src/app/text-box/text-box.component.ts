@@ -6,7 +6,7 @@ import { ProcessComponent } from '../process';
   templateUrl: './text-box.component.html',
   styleUrls: ['./text-box.component.scss'],
 })
-export class TextBoxComponent implements ProcessComponent {
+export class TEXTBOXComponent implements ProcessComponent {
   
   @Input() data;
 
