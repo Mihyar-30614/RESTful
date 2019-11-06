@@ -1,12 +1,15 @@
 <ion-row>
-  <ion-item>
-    <ion-label>{{data.POS_LABEL}}</ion-label>
-    <ion-select multiple="false" id={{data.POS_DICT_NAME}} class="style_border"
-      [disabled]="data.POS_CONTROL_DISABLED == '1' ? true : false">
-      <ion-select-option *ngFor="let option of data.RESULT" [value]="option.CODE"
-        [selected]="data.POS_DEFAULT_CODE == option.CODE? true : false">
-        {{option.DESC}}
-      </ion-select-option>
-    </ion-select>
-  </ion-item>
+	<ion-col size="2">
+		<!-- <ion-label class="ion-text-wrap">{{data.POS_LABEL}}</ion-label> -->
+		<ion-label class="ion-text-wrap">{{label}}</ion-label>
+	</ion-col>
+	<ion-col size="10">
+		<ion-select multiple="false" id={{data.POS_DICT_NAME}} class="style_border"
+			[disabled]="data.POS_CONTROL_DISABLED == '1' ? true : false">
+			<ion-select-option *ngFor="let option of data.RESULT" [value]="option.CODE"
+				[selected]="data.POS_DEFAULT_CODE == option.CODE? true : false">
+				{{option.DESC}}
+			</ion-select-option>
+		</ion-select>
+	</ion-col>
 </ion-row>

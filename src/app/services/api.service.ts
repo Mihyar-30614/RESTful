@@ -12,7 +12,7 @@ import { TEXTAREAComponent } from '../textarea/textarea.component';
 })
 export class ApiService {
 
-  url = "https://m.megamation.com/o4w940/8503/dlwebOI10.php/O4W_API"
+  url = "https://dev.megamation.com/o4w940/8503/dlwebOI10.php/O4W_API"
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

@@ -7,12 +7,13 @@ import { ProcessComponent } from '../process';
 @Component({
 	selector: 'app-mobilejq-wo-new',
 	templateUrl: './mobilejq-wo-new.page.html',
-	styleUrls: ['./mobilejq-wo-new.page.scss'],
+	styleUrls: ['./mobilejq-wo-new.page.scss']
 })
 export class MOBILEJQWONEWPage implements OnInit {
 
 	elements: Observable<any[]>;
 	data : any[];
+
 	@ViewChild('processContainer', {read: ViewContainerRef, static: true}) container;
 	constructor(private apiService: ApiService, private resolver : ComponentFactoryResolver) { }
 
