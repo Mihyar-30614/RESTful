@@ -3,6 +3,9 @@
 		<ion-label class="ion-text-wrap">{{label}}</ion-label>
 	</ion-col>
 	<ion-col size="10">
-		<div><ion-textarea id={{id}} class="style_border" [disabled]="disabled" [required]="required" [(ngModel)]="name"></ion-textarea></div>
+		<div>
+			<ion-textarea id={{id}} class="style_border" [disabled]="disabled" required="required" [(ngModel)]="name"
+				name={{id}}></ion-textarea>
+		</div>
 	</ion-col>
 </ion-row>

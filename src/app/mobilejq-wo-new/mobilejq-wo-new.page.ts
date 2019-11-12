@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolve
 import { Observable } from 'rxjs';
 import { ApiService } from '../services/api.service';
 import { ProcessComponent } from '../process';
+import { NgForm } from '@angular/forms';
 
 
 @Component({
@@ -26,6 +27,11 @@ export class MOBILEJQWONEWPage implements OnInit {
 				(<ProcessComponent>componentRef.instance).data = element.data;
 			}
 		})
+	}
+	onSubmit(f: NgForm){
+		console.log(f);
+		console.log(f.value);
+		console.log(f.valid);
 	}
 
 }
