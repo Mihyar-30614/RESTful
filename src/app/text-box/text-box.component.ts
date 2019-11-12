@@ -11,6 +11,7 @@ export class TEXTBOXComponent implements ProcessComponent {
 	label: string;
 	required = false;
 	disabled = false;
+	hidden = false;
 	id : string;
 	@Input() data;
 
@@ -20,6 +21,7 @@ export class TEXTBOXComponent implements ProcessComponent {
 		this.label = this.data.POS_LABEL;
 		let name = this.data.POS_DICT_NAME;
 		this.id = name[0] == "#"? name.slice(1,name.length) : name;
+		this.hidden = name == "WO_NO"? true : false;
 		if (this.data.POS_REQUIRED == '1'){
 			this.label = '*' + this.label;
 			this.required = true;
