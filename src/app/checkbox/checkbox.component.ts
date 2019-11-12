@@ -11,6 +11,7 @@ export class CHECKBOXComponent implements ProcessComponent {
 	label: string;
 	required : boolean = false;
 	disabled : boolean = false;
+	name: boolean = false;
 	id : string;
 	@Input() data;
 
@@ -18,8 +19,8 @@ export class CHECKBOXComponent implements ProcessComponent {
 
 	ngOnInit() {
 		this.label = this.data.POS_LABEL;
-		let name = this.data.POS_DICT_NAME;
-		this.id = name[0] == "#"? name.slice(1,name.length) : name;
+		let temp = this.data.POS_DICT_NAME;
+		this.id = temp[0] == "#"? temp.slice(1,temp.length) : temp;
 		if (this.data.POS_REQUIRED == '1'){
 			this.label = '*' + this.label;
 			this.required = true;

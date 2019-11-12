@@ -3,7 +3,7 @@
 		<ion-label class="ion-text-wrap">{{label}}</ion-label>
 	</ion-col>
 	<ion-col size="10">
-		<ion-input type="text" id={{id}} [value]=data.POS_DEFAULT_CODE class="style_border"
+		<ion-input type="text" id={{id}} [value]="name" class="style_border" [(ngModel)]="name"
 			[disabled]="disabled" [required]="required"></ion-input>
 	</ion-col>
 </ion-row>

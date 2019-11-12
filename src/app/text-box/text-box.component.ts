@@ -12,6 +12,7 @@ export class TEXTBOXComponent implements ProcessComponent {
 	required : boolean = false;
 	disabled : boolean = false;
 	hidden : boolean = false;
+	name : string = '';
 	id : string;
 	@Input() data;
 
@@ -19,9 +20,10 @@ export class TEXTBOXComponent implements ProcessComponent {
 
 	ngOnInit() {
 		this.label = this.data.POS_LABEL;
-		let name = this.data.POS_DICT_NAME;
-		this.id = name[0] == "#"? name.slice(1,name.length) : name;
-		this.hidden = name == "WO_NO"? true : false;
+		this.name = this.data.POS_DEFAULT_CODE;
+		let temp = this.data.POS_DICT_NAME;
+		this.id = temp[0] == "#"? temp.slice(1,temp.length) : temp;
+		this.hidden = temp == "WO_NO"? true : false;
 		if (this.data.POS_REQUIRED == '1'){
 			this.label = '*' + this.label;
 			this.required = true;
