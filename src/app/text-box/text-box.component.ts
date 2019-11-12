@@ -8,10 +8,10 @@ import { ProcessComponent } from '../process';
 })
 export class TEXTBOXComponent implements ProcessComponent {
 
-	label: string;
-	required = false;
-	disabled = false;
-	hidden = false;
+	label : string;
+	required : boolean = false;
+	disabled : boolean = false;
+	hidden : boolean = false;
 	id : string;
 	@Input() data;
 

@@ -9,8 +9,8 @@ import { ProcessComponent } from '../process';
 export class CHECKBOXComponent implements ProcessComponent {
 
 	label: string;
-	required = false;
-	disabled = false;
+	required : boolean = false;
+	disabled : boolean = false;
 	id : string;
 	@Input() data;
 
